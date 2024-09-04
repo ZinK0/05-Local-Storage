@@ -4,16 +4,16 @@ var emailInput = document.querySelector("#email");
 var passwordInput = document.querySelector("#password");
 var signUpButton = document.querySelector("#sign-up");
 
-signUpButton.addEventListener("click", function(event) {
+signUpButton.addEventListener("click", function (event) {
   event.preventDefault();
-  
+
   var user = {
     firstName: firstNameInput.value.trim(),
     lastName: lastNameInput.value.trim(),
     email: emailInput.value.trim(),
-    password: passwordInput.value.trim()
+    password: passwordInput.value.trim(),
   };
 
-  // set new submission to local storage 
-  localStorage.setItem(user);
+  // set new submission to local storage
+  localStorage.setItem("User", JSON.stringify(user));
 });
